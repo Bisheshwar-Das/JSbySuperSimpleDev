@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin-Flip Game</title>
+  </head>
+  <body>
+    <button onclick="flipCoin()">Flip the Coin    </button>
+    <h2>Your Guess</h2>
+    <button onclick="resultCheck('Heads')" >Heads</button>
+    <button onclick="resultCheck('Tails')" >Tails</button>
+    <script>
+
+      let randomNumber;
+      let flipSide;
+      function flipCoin(){
+        randomNumber=Math.random();
+        flipSide=randomNumber<0.5?"Heads":"Tails";
+      }
+      function resultCheck(guess){
+        console.log(flipSide?(flipSide==guess?"You Won":"You Lost"):"Please FLip The COin")
+      }
+    </script>
+  </body>
+</html>
